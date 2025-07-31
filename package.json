@@ -1,0 +1,68 @@
+{
+  "name": "@yukiakai/json-stream-parser",
+  "version": "1.0.0",
+  "description": "Streaming JSON parser that handles fragmented data and emits full JSON objects when complete.",
+  "main": "./dist/index.cjs",
+  "type": "module",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.js"
+  },
+  "scripts": {
+    "test": "npm run build && npx vitest run --reporter verbose --coverage",
+    "format": "prettier --write **/*.{js,ts}",
+    "format:check": "prettier --check **/*.{js,ts}",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "build": "npx tsup"
+  },
+  "files": [
+    "dist/*",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "json",
+    "parser",
+    "streaming",
+    "stream",
+    "fragment",
+    "partial",
+    "json-stream",
+    "json-stream-parser"
+  ],
+  "author": "Yuki_akai",
+  "homepage": "https://github.com/yukiakai212/json-stream-parser",
+  "engines": {
+    "node": ">= 16"
+  },
+  "maintainers": [
+    {
+      "name": "Yuki_akai",
+      "homepage": "https://github.com/yukiakai212"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukiakai212/json-stream-parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yukiakai212/json-stream-parser/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.5",
+    "@eslint/js": "^9.30.1",
+    "@vitest/coverage-v8": "^3.2.4",
+    "dotenv": "^17.0.1",
+    "eslint": "^9.30.0",
+    "pkg-sandbox": "^1.0.1",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.35.1",
+    "vitest": "^3.2.4"
+  }
+}
