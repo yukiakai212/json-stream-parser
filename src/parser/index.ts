@@ -1,1 +1,1 @@
-export * from './JSONStreamParser.js';
+export * from './JsonStreamParser.js';

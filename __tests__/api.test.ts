@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { JSONStreamParser } from '../src/index.js'; // giả định parser nằm trong index.ts
+import { JsonStreamParser } from '../src/index.js'; // giả định parser nằm trong index.ts
 
 const toChunks = (str: string, chunkSize = 4) => {
   const chunks = [];
@@ -9,12 +9,12 @@ const toChunks = (str: string, chunkSize = 4) => {
   return chunks;
 };
 
-describe('JSONStreamParser', () => {
+describe('JsonStreamParser', () => {
   it('should parse single valid JSON object split into chunks', () => {
     const input = { hello: 'world', count: 42 };
     const jsonStr = JSON.stringify(input);
 
-    const parser = new JSONStreamParser();
+    const parser = new JsonStreamParser();
     const onData = vi.fn();
     parser.on('data', onData);
 
@@ -31,7 +31,7 @@ describe('JSONStreamParser', () => {
     const b = [1, 2, 3];
     const str = JSON.stringify(a) + JSON.stringify(b);
 
-    const parser = new JSONStreamParser();
+    const parser = new JsonStreamParser();
     const onData = vi.fn();
     parser.on('data', onData);
 
@@ -45,7 +45,7 @@ describe('JSONStreamParser', () => {
   });
 
   it('should emit error on invalid JSON', () => {
-    const parser = new JSONStreamParser();
+    const parser = new JsonStreamParser();
     const onError = vi.fn();
     parser.on('error', onError);
 
@@ -67,7 +67,7 @@ describe('JSONStreamParser', () => {
 
     const jsonStr = JSON.stringify(input);
 
-    const parser = new JSONStreamParser();
+    const parser = new JsonStreamParser();
     const onData = vi.fn();
     parser.on('data', onData);
 

@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events';
 
-export class JSONStreamParser extends EventEmitter {
+export class JsonStreamParser extends EventEmitter {
   private buffer = '';
   private depthCurly = 0;
   private depthSquare = 0;
