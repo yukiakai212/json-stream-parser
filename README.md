@@ -11,17 +11,17 @@ It handles **fragmented** JSON input — such as from sockets, WebSockets, or ch
 
 ---
 
-## ✨ Features
+## Features
 
-- 📦 Parses streamed JSON incrementally (like from `.write()` chunks)
-- ⚡ Emits complete JSON values when available
-- 🔍 Detects incomplete vs. invalid JSON properly
-- 🧠 Skips strings `"..."` correctly to avoid false `{` or `}` detection
-- 🛠 Tiny and dependency-free
+- Parses streamed JSON incrementally (like from `.write()` chunks)
+- Emits complete JSON values when available
+- Detects incomplete vs. invalid JSON properly
+- Skips strings `"..."` correctly to avoid false `{` or `}` detection
+- Tiny and dependency-free
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 npm install @yukiakai/json-stream-parser
@@ -29,7 +29,7 @@ npm install @yukiakai/json-stream-parser
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ```ts
 import { JsonStreamParser } from '@yukiakai/json-stream-parser';
@@ -53,7 +53,7 @@ parser.write('ob"}');
 
 ---
 
-## 🧩 API
+## API
 
 ### `new JsonStreamParser()`
 
@@ -71,7 +71,7 @@ It automatically buffers and emits full JSON values when complete.
 
 ---
 
-## 📚 Example: With Socket
+## Example: With Socket
 
 ```ts
 import net from 'net';
@@ -99,7 +99,7 @@ server.listen(3000);
 
 ---
 
-## 🧪 Tests
+## Tests
 
 ```bash
 npm run test
@@ -107,7 +107,7 @@ npm run test
 
 ---
 
-## 📄 License
+## License
 
 MIT © [Yuki Akai](https://github.com/yukiakai212)
 
