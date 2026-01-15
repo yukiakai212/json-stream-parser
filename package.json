@@ -1,6 +1,6 @@
 {
   "name": "@yukiakai/json-stream-parser",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Streaming JSON parser that handles fragmented data and emits full JSON objects when complete.",
   "main": "./dist/index.cjs",
   "type": "module",
