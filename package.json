@@ -35,6 +35,7 @@
   ],
   "author": "Yuki_akai",
   "homepage": "https://github.com/yukiakai212/json-stream-parser",
+  "funding": "https://github.com/sponsors/yukiakai212",
   "engines": {
     "node": ">= 16"
   },
